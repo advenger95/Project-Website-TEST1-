@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Project Wireframe</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Web Assets/CSS/protostyle.css">
+
+</head>
+<body>
+
+<!-- Header -->
+    <header id="header">
+            <a href="#menu" onclick="openNav()" ><span style="font-size: 50px">&#9776;</span></a>
+    </header>
+
+<!-- Nav -->
+    <div id="menu" class="mySideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>        
+        <a href="index.html">Home</a>
+        <a href="generic.html">Projects</a>
+        <a href="elements.html">Contact</a>       
+    </div>
+   
+<!--Modal COntainer-->
+
+<div class="modal-container" id="modal1Target">
+    <div class="modal-content vertical-center-position">
+        <a href="#" class="modal-close-btn">
+            Close X
+        </a>
+        <h1>
+            Hello Again!
+        </h1>
+        <p>Im a small modal box!</p>
+
+    </div>
+</div>
+<!-- Banner -->
+
+    <section id="banner" class="bg-img" data-bg="advenger_mask.JPG" >
+
+            <div class="inner">
+                <header>
+                    <h1 style="font-size: 50px; padding: 30px;">Welcome to Adam's Site</h1>
+                    <h2 style="font-size: 30px;">A world of possibility!</h2>
+                </header>
+            </div>
+            <a href="#" class="modal-link" data-modal-target="modal1Target">
+                Click Me!!
+            </a>
+            <br>
+            <a href="#one" class="more">&#8744;</a>
+
+    </section>
+
+    <script>
+        var modalTriggerElements = document.querySelectorAll('.modal-link');
+        var modalCloseElements = document.querySelectorAll('.modal-close-btn');
+
+        modalTriggerElements.forEach(function(element) {
+        console.log(element);
+        
+        element.addEventListener('click', function(e) {
+
+            var modalContainerId = element.getAttribute('data-modal-target');  // get attribute of all data types
+
+            var modelContainer = document.querySelector('#' + modalContainerId);
+
+            modelContainer.classList.add('active');
+
+
+        });
+        });
+
+        modalCloseElements.forEach(function(element) {
+        console.log(element);
+
+        element.addEventListener('click', function(e) {
+                var modalContiainer = element.closest('.modal-container');
+
+                modalContiainer.classList.remove('active');
+
+
+        });
+        });    
+    
+    </script>
+
+<!-- Section One -->
+    <section id="one" class="wrapper post bg-img" data-bg="golden_gate.jpg">
+            <div class="inner">
+                <article class="box">
+                    <header>
+                        <h2>New Post #1</h2>
+                        <p>01.01.2019</p>
+                    </header>
+                    <div class="content">
+                        <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                    </div>
+                    <footer>
+                        <a href="generic.html" class="button alt">Learn More</a>
+                    </footer>
+                </article>
+            </div>
+            <a href="#two" class="more">&#8744;</a>
+    </section>
+<!-- Two -->
+    <section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
+            <div class="inner">
+                <article class="box">
+                    <header>
+                        <h2>New Post #2</h2>
+                        <p>12.21.2019</p>
+                    </header>
+                    <div class="content">
+                        <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                    </div>
+                    <footer>
+                        <a href="generic.html" class="button-alt">Learn More</a>
+                    </footer>
+                </article>
+            </div>
+            <a href="#three" class="more">&#8744;</a>
+    </section>
+
+<!-- Three -->
+        <section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+            <div class="inner">
+                <article class="box">
+                    <header>
+                        <h2>New Post #3</h2>
+                        <p>11.11.2019</p>
+                    </header>
+                    <div class="content">
+                        <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                    </div>
+                    <footer>
+                        <a href="generic.html" class="button alt">Learn More</a>
+                    </footer>
+                </article>
+            </div>
+            <a href="#footer" class="more">&#8744;</a>
+        </section>
+
+<!-- Footer -->
+        <footer id="footer">
+				<div class="innerfoot">
+
+					<h2>Contacts</h2>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">What are you after?</label>
+							<textarea name="message" id="message" rows="12" columns="10" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<ul class="icons">
+						<li><a href="#" class="icon round fa fa-twitter"><span class="label"></span></a></li>
+						<li><a href="#" class="icon round fa fa-facebook"><span class="label"></span></a></li>
+						<li><a href="#" class="icon round fa fa-instagram"><span class="label"></span></a></li>
+					</ul>
+
+					<div class="copyright">
+						&copy; Adam Greenfeld: 2019.
+					</div>
+
+				</div>
+        </footer>
+
+
+</body>
+<script>
+    function openNav() {
+        document.getElementById("menu").style.width = "350px";
+    }
+    
+    function closeNav() {
+        document.getElementById("menu").style.width = "0";
+    }
+</script>    
+</html>
